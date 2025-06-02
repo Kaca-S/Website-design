@@ -5,3 +5,9 @@
 @use 'why-choose';
 @use 'destination-card';
 @use 'another-section';
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
