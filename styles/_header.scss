@@ -1,0 +1,115 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.hero {
+  background: url('../images/image-header.png') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  color: #FFF;
+  font-family: 'Josefin Sans', sans-serif;
+
+  &__content {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 26px;
+      letter-spacing: 4.8px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: 6.82px;
+      color: #FFF;
+      margin: 16px 0;
+    }
+
+    .search-bar {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        padding: 12px 20px;
+        font-size: 14px;
+        color: #999;
+        text-align: center;
+        font-family: 'Josefin Sans', sans-serif;
+        letter-spacing: 2.8px;
+        border: none;
+        outline: none;
+      }
+
+      button {
+        background-color: #5474FD;
+        border: 2px solid #FFF;
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        span {
+          color: #FFF;
+          font-family: 'Aleo', serif;
+          font-size: 14px;
+          letter-spacing: 1.4px;
+          text-transform: uppercase;
+          margin-right: 8px;
+        }
+
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    background-color: #5474FD;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 60px;
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+    .logo a {
+      text-decoration: none;
+      color: #FFF;
+    }
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+
+      li a {
+        text-decoration: none;
+        color: #FFF;
+        font-family: 'Aleo', serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        line-height: 26px;
+      }
+    }
+  }
+}
