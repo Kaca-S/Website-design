@@ -10,12 +10,9 @@
   color: $text-white;
   font-family: $font-body;
   z-index: 10;
-  overflow: hidden;
-
   &__content {
     text-align: center;
     margin: auto;
-
     h1 {
       font-size: 48px;
       font-weight: 700;
@@ -23,7 +20,6 @@
       letter-spacing: 4.8px;
       text-transform: uppercase;
     }
-
     p {
       font-size: 22px;
       font-weight: 400;
@@ -31,14 +27,12 @@
       letter-spacing: 6.82px;
       margin: 16px 0;
     }
-
     .search-bar {
       margin-top: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-
       input {
         width: 100%;
         max-width: 503px;
@@ -51,7 +45,6 @@
         border: none;
         outline: none;
       }
-
       button {
         width: 153px;
         height: 63px;
@@ -61,7 +54,6 @@
         display: flex;
         align-items: center;
         cursor: pointer;
-
         span {
           color: $text-white;
           font-family: $font-heading;
@@ -70,7 +62,6 @@
           text-transform: uppercase;
           margin-right: 8px;
         }
-
         img {
           width: 16px;
           height: 16px;
@@ -78,7 +69,6 @@
       }
     }
   }
-
   &__nav {
     background-color: $primary-blue;
     display: flex;
@@ -87,31 +77,26 @@
     padding: 0 $space-md;
     height: 60px;
     position: relative;
-
     #menu-toggle {
       display: none;
     }
-
     .hamburger {
       display: none;
       font-size: 28px;
       color: $text-white;
       cursor: pointer;
     }
-
     .logo {
       font-size: 24px;
       font-weight: 700;
       letter-spacing: 2.4px;
       text-transform: uppercase;
       font-family: $font-body;
-
       a {
         text-decoration: none;
         color: $text-white;
       }
     }
-
     .nav {
       ul {
         list-style: none;
@@ -119,7 +104,6 @@
         gap: 24px;
         margin: 0;
         padding: 0;
-
         li a {
           text-decoration: none;
           color: $text-white;
@@ -128,7 +112,6 @@
           text-transform: uppercase;
           line-height: 26px;
           transition: color 0.3s ease, border-bottom 0.3s ease;
-
           &:hover {
             color: lighten($text-white, 20%);
             border-bottom: 2px solid $text-white;
@@ -143,7 +126,6 @@
       flex-direction: column;
       align-items: center;
       padding: 20px;
-
       .hamburger {
         display: block;
         position: absolute;
@@ -151,23 +133,19 @@
         right: 20px;
         z-index: 1000;
       }
-
       .nav {
         display: none;
         width: 100%;
-
         ul {
           flex-direction: column;
           align-items: center;
           gap: 10px;
           padding: 10px 0;
           background-color: $primary-blue;
-
           li {
             width: 100%;
             text-align: center;
           }
-
           a {
             display: block;
             padding: 10px 0;
@@ -176,29 +154,23 @@
         }
       }
     }
-
     &__content {
       padding: 0 $space-sm;
-
       h1 {
         font-size: 32px;
         letter-spacing: 2px;
       }
-
       p {
         font-size: 16px;
         letter-spacing: 2px;
       }
-
       .search-bar {
         flex-direction: column;
         gap: 10px;
-
         input,
         button {
           width: 100%;
         }
-
         button {
           justify-content: center;
         }
@@ -206,7 +178,7 @@
     }
   }
 }
-// ✅ FIXED: Must be outside the .hero__nav block
+// Must be outside the .hero__nav block
 @media (max-width: 768px) {
   #menu-toggle:checked ~ .nav {
     display: block !important;

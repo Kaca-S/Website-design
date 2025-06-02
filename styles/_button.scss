@@ -16,17 +16,14 @@
   text-transform: uppercase;
   transition: background-color 0.3s ease, transform 0.2s ease;
   cursor: pointer;
-
   &:hover {
    span {
     margin-right: 8px;
   }
-
   img {
     width: 16px;
     height: 16px;
   }
-
   &:hover {
     background-color: darken($primary-blue, 5%);
     transform: translateY(-1px);
