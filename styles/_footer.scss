@@ -108,3 +108,21 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .testimonial__content {
+    flex-direction: column;
+    align-items: center;
+
+    .testimonial__image,
+    .testimonial__card {
+      width: 100%;
+      max-width: 90vw;
+      height: auto;
+    }
+
+    .testimonial__card {
+      padding: 20px;
+      box-sizing: border-box;
+    }
+  }
+}
