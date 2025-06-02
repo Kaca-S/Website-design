@@ -13,7 +13,15 @@ body, html {
   padding: 0;
   height: 100%;
 }
-
 html {
   scroll-behavior: smooth;
 }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+

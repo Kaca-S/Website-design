@@ -12,3 +12,32 @@
     width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .another-destination {
+    justify-content: center;
+    padding: 40px 20px;
+    .card {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      padding: 30px 20px;
+      h2 {
+        font-size: 28px;
+        line-height: 30px;
+      }
+      .location {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      .description {
+        font-size: 14px;
+        line-height: 24px;
+      }
+      .btn {
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+  }
+}
