@@ -12,32 +12,34 @@
     <title>Website design</title>
 </head>
 <body>
-    <header class="hero">
-    <div class="hero__content">
-      <h1>BHROMAON</h1>
-      <p>Safe Travel Anywhere</p>
-      <div class="search-bar">
-        <input type="text" placeholder="Search your travel destination..." />
-        <button>
-          <span>Search</span>
-          <img src="images/search-icon.svg" alt="Search Icon" />
+    <header class="hero" id="home">
+    <div class="hero__content container section">
+        <h1>BHROMAON</h1>
+        <p>Safe Travel Anywhere</p>
+    <form class="search-bar" onsubmit="return validateSearch(event)">
+      <input type="text" id="search" name="search" placeholder="Search Your Travel Destination" required />
+        <button type="submit" class="btn">
+            <span>SEARCH</span>
+            <img src="images/search-icon.svg" alt="Search Icon" />
         </button>
-      </div>
+    </form>
     </div>
-
     <div class="hero__nav">
-      <div class="logo">
-        <a href="index.html">BHROMAON</a>
-      </div>
-      <nav class="nav">
-        <ul>
-          <li><a href="#">Who We Are</a></li>
-          <li><a href="#">What We Do</a></li>
-          <li><a href="#">Travel With Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </nav>
-    </div>
-    </header>
+  <div class="logo">
+    <a href="index.html">BHROMAON</a>
+  </div>
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="#who">Who We Are</a></li>
+      <li><a href="#what">What We Do</a></li>
+      <li><a href="#travel">Travel With Us</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+</div>
+</header>
 </body>
 </html>

@@ -1,23 +1,20 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
+@use 'variables' as *;
 
 .hero {
   background: url('../images/image-header.png') no-repeat center center/cover;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  color: #FFF;
-  font-family: 'Josefin Sans', sans-serif;
+  color: $text-white;
+  font-family: $font-body;
+  z-index: 10;
+  overflow: hidden;
 
   &__content {
     text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto;
 
     h1 {
       font-size: 48px;
@@ -32,7 +29,6 @@ body, html {
       font-weight: 400;
       line-height: 26px;
       letter-spacing: 6.82px;
-      color: #FFF;
       margin: 16px 0;
     }
 
@@ -41,29 +37,34 @@ body, html {
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
 
       input {
-        padding: 12px 20px;
+        width: 100%;
+        max-width: 503px;
+        height: 63px;
         font-size: 14px;
         color: #999;
         text-align: center;
-        font-family: 'Josefin Sans', sans-serif;
+        font-family: $font-body;
         letter-spacing: 2.8px;
         border: none;
         outline: none;
       }
 
       button {
-        background-color: #5474FD;
-        border: 2px solid #FFF;
-        padding: 12px 20px;
+        width: 153px;
+        height: 63px;
+        background-color: $primary-blue;
+        border: 2px solid $text-white;
+        padding: 14px 20px;
         display: flex;
         align-items: center;
         cursor: pointer;
 
         span {
-          color: #FFF;
-          font-family: 'Aleo', serif;
+          color: $text-white;
+          font-family: $font-heading;
           font-size: 14px;
           letter-spacing: 1.4px;
           text-transform: uppercase;
@@ -79,36 +80,60 @@ body, html {
   }
 
   &__nav {
-    background-color: #5474FD;
+    background-color: $primary-blue;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
+    padding: 0 $space-md;
     height: 60px;
+    position: relative;
+
+    #menu-toggle {
+      display: none;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      color: $text-white;
+      cursor: pointer;
+    }
 
     .logo {
       font-size: 24px;
       font-weight: 700;
       letter-spacing: 2.4px;
       text-transform: uppercase;
-      font-family: 'Josefin Sans', sans-serif;
-    }
-    .logo a {
-      text-decoration: none;
-      color: #FFF;
-    }
-    .nav ul {
-      list-style: none;
-      display: flex;
-      gap: 24px;
+      font-family: $font-body;
 
-      li a {
+      a {
         text-decoration: none;
-        color: #FFF;
-        font-family: 'Aleo', serif;
-        font-size: 14px;
-        text-transform: uppercase;
-        line-height: 26px;
+        color: $text-white;
+      }
+    }
+
+    .nav {
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 24px;
+        margin: 0;
+        padding: 0;
+
+        li a {
+          text-decoration: none;
+          color: $text-white;
+          font-family: $font-heading;
+          font-size: 14px;
+          text-transform: uppercase;
+          line-height: 26px;
+          transition: color 0.3s ease, border-bottom 0.3s ease;
+
+          &:hover {
+            color: lighten($text-white, 20%);
+            border-bottom: 2px solid $text-white;
+          }
+        }
       }
     }
   }
