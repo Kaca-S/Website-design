@@ -1,0 +1,49 @@
+@use 'variables' as *;
+@use 'button';
+
+
+.card {
+  max-width: 100%;
+  width: 100%;
+  width: 543px;
+  height: 374px;
+  background-color: rgba(35, 35, 35, 0.9);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $text-white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    border: 1px solid lighten($text-light, 10%);
+  }
+  .location {
+    color: $text-light;
+    font-family: $font-body;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-family: $font-body;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0 0 20px;
+  }
+  .description {
+    font-family: $font-body;
+    font-size: 16px;
+    color: $text-light;
+    line-height: 26px;
+    margin: 20px 0;
+  }
+  .btn {
+    @extend .btn;
+  }
+}
+
+
