@@ -37,6 +37,11 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      cursor: pointer;
+      &:hover {
+      background-color: lighten($dark-bg, 5%); // adjust as needed
+      transition: background-color 0.3s ease;
+    }
       h3 {
         color: #FEFEFE;
         font-family: $font-body;
@@ -108,18 +113,17 @@
     }
   }
 }
+
 @media (max-width: 768px) {
   .testimonial__content {
     flex-direction: column;
     align-items: center;
-
     .testimonial__image,
     .testimonial__card {
       width: 100%;
       max-width: 90vw;
       height: auto;
     }
-
     .testimonial__card {
       padding: 20px;
       box-sizing: border-box;
