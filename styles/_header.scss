@@ -78,7 +78,7 @@
       }
     }
   }
-  .scroll-down {
+ .scroll-down { 
   position: absolute;
   top: 78%; // Adjust this to fine-tune vertical position
   left: 50%;
@@ -95,14 +95,23 @@
     letter-spacing: 2.8px;
     margin: 0;
   }
-  i {
-    display: block;
-    margin: 8px auto 0;
-    width: 17px;
-    height: 11px;
-    font-size: 14px;
-    color: $text-white;
-    animation: bounce 1.5s infinite ease-in-out;
+  a {
+    display: inline-block;
+    text-decoration: none;
+    i {
+      display: block;
+      margin: 8px auto 0;
+      width: 17px;
+      height: 11px;
+      font-size: 14px;
+      color: $text-white;
+      animation: bounce 1.5s infinite ease-in-out;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    &:hover i {
+      transform: translateY(4px);
+    }
   }
 }
   &__nav {
