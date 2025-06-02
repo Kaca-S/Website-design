@@ -7,3 +7,32 @@
   align-items: center;
   padding: 80px;
 }
+
+@media (max-width: 768px) {
+  .destination {
+    padding: 40px 20px;
+    justify-content: center;
+    .card {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      padding: 30px 20px;
+      h2 {
+        font-size: 28px;
+        line-height: 30px;
+      }
+      .location {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      .description {
+        font-size: 14px;
+        line-height: 24px;
+      }
+      .btn {
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use 'variables' as *;
+
+.another-destination {
+  background: url('../images/image 4.png') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  .section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+}
