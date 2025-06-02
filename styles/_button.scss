@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+.btn {
+  width: 228px;
+  height: 48px;
+  background-color: $primary-blue;
+  color: $text-white;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-heading;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+   span {
+    margin-right: 8px;
+  }
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
+
+  &:hover {
+    background-color: darken($primary-blue, 5%);
+    transform: translateY(-1px);
+  }
+  }
+}
