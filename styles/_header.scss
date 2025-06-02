@@ -1,5 +1,14 @@
 @use 'variables' as *;
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
 .hero {
   background: url('../images/image-header.png') no-repeat center center/cover;
   min-height: 100vh;
@@ -69,6 +78,33 @@
       }
     }
   }
+  .scroll-down {
+  position: absolute;
+  top: 78%; // Adjust this to fine-tune vertical position
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 123px;
+  text-align: center;
+  z-index: 20;
+  p {
+    color: $text-white;
+    font-family: $font-body;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 2.8px;
+    margin: 0;
+  }
+  i {
+    display: block;
+    margin: 8px auto 0;
+    width: 17px;
+    height: 11px;
+    font-size: 14px;
+    color: $text-white;
+    animation: bounce 1.5s infinite ease-in-out;
+  }
+}
   &__nav {
     background-color: $primary-blue;
     display: flex;
