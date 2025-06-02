@@ -137,4 +137,85 @@
       }
     }
   }
+
+@media (max-width: 768px) {
+    &__nav {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+
+      .hamburger {
+        display: block;
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        z-index: 1000;
+      }
+
+      .nav {
+        display: none;
+        width: 100%;
+
+        ul {
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          padding: 10px 0;
+          background-color: $primary-blue;
+
+          li {
+            width: 100%;
+            text-align: center;
+          }
+
+          a {
+            display: block;
+            padding: 10px 0;
+            color: $text-white;
+          }
+        }
+      }
+    }
+
+    &__content {
+      padding: 0 $space-sm;
+
+      h1 {
+        font-size: 32px;
+        letter-spacing: 2px;
+      }
+
+      p {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+
+      .search-bar {
+        flex-direction: column;
+        gap: 10px;
+
+        input,
+        button {
+          width: 100%;
+        }
+
+        button {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+// ✅ FIXED: Must be outside the .hero__nav block
+@media (max-width: 768px) {
+  #menu-toggle:checked ~ .nav {
+    display: block !important;
+    z-index: 9999;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: $primary-blue;
+    z-index: 1000;
+  }
 }
